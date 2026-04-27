@@ -1,7 +1,7 @@
 //NOTA: Por enquanto, não usar LocalStorage.
 
-let nomeU_lista = [];
-let senhaU_lista = [];
+let nomeU_lista = "Cujinm";
+let senhaU_lista = 2303;
 
 //registrar
 
@@ -25,7 +25,7 @@ function logar() {
 
     if (!nomeU || !senhaU) {
         alert("Preencha todos os campos");
-    } else if (nomeU_lista.includes(nomeU)) {
+    } else if (nomeU == nomeU_lista && senhaU == senhaU_lista) {
         alert(`Bem vindo/a ${nomeU}!`);
     } else {
         alert("Informações não encontras, por favor registre-se");
@@ -40,4 +40,17 @@ function mos() {
 
 function mosSe() {
     alert(senhaU_lista);
+}
+
+// mostar
+function mostrar() {
+  const el = document.getElementById("encon_regi");
+  
+  const emm = document.getElementById("segredo");
+
+  if (el.style.display === "none") {
+    el.style.display = "block";
+  } else {
+    el.style.display = "none";
+  }
 }
