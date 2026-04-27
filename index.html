@@ -3,9 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Título da Página</title>
+        <title>Login - HYPER HALL</title>
     </head>
     <body>
-        <h1>Olá, Mundo!</h1>
+        <h1>HYPER HALL</h1>
+        <section id="login">
+            <h2>Login</h2>
+            <div class="nomeLogin">
+                <label>Nome</label>
+                <input type="text" id="nomeUsu" />
+            </div>
+            <div class="senhaLogin">
+                <label>Senha</label>
+                <input type="text" id="senhaUsu" />
+            </div>
+            <div class="botaoLogin">
+                <button onclick="logar()">Logar</button>
+            </div>
+        </section>
+       
+       <!-- registro -->
+        
+        <section id="registro">
+            <h2>Registro</h2>
+            <div class="nomeRegistro">
+                <label>Nome</label>
+                <input type="text" id="newNomeUsu" />
+            </div>
+            <div class="senhaRegistro">
+                <label>Senha</label>
+                <input type="text" id="newSenhaUsu" />
+            </div>
+            <div class="botaoRegistro">
+                <button onclick="registrar()">Registrar</button>
+            </div>
+        </section>
+        
+        <section id="buuu">
+          <h2>Butoes de teste</h2>
+        <button onclick="mos()">mostarNome</button>
+        <button onclick="mosSe()">mostarSenha</button>
+        </section>
+        <script src="js/index.js"></script>
     </body>
 </html>
