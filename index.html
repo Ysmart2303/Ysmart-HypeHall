@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,7 @@
         
         <section id="login">
             
-                <div class="corpoLogin">
+                <div class="CLR">
                     <h2>Login</h2>
 
                     <div class="nomeLogin"> <!-- nomeLogin -->
@@ -42,7 +43,7 @@
 
         <section id="registro" class="hidden">
             
-                <div class="corpoRegistro">
+                <div class="CLR">
 
                     <h2>Registro</h2>
 
@@ -72,7 +73,7 @@
             
         </section>
 
-        <!-- Corpo por login -->
+        <!-- Corpo pos login -->
         
         <section id="corpo" class="hidden">
 
@@ -80,34 +81,34 @@
 
             <h2>JOGOS</h2> <!-- jogos -->
 
-            <div class="corpoJogos" >
-                <div class="jogo">
+            <div class="cama" >
+                <div class="card">
                    <a href="https://play.google.com/store/apps/details?id=com.monkeyibrow.worldsoccerchamps&hl=pt_BR" target="_blank" rel="noopener noreferrer">
                        <img src="img/jogos/wsc.jpg" alt="WSC" />
                         <p>Soccer Champs</p>
                     </a>
                 </div>
-                <div class="jogo">
+                <div class="card">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                         <img src="img/jogos/fl.jpg" alt="FL" />
                         <p>Football League</p>
                     </a>
                 </div>
-                <div class="jogo">
+                <div class="card">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                         <img src="img/jogos/dls.png" alt="DLS" />
                         <p>DLS</p>
                     </a>
                 </div>
 
-                <div class="jogo">
+                <div class="card">
                     <a href="https://eaglercraft.com" target="_blank" rel="noopener noreferrer">
                         <img src="img/jogos/mine.webp" alt="Minecraft" />
                         <p>Minecraft</p>
                     </a>
                 </div>
 
-                <div class="jogo">
+                <div class="card">
                     <a href="https://www.roblox.com/pt" target="_blank" rel="noopener noreferrer">
                         <img src="img/jogos/roblox.webp" alt="Roblox" />
                         <p>Roblox</p>
@@ -123,29 +124,29 @@
             
                 <h2>APPS</h2>
     
-                <div class="corpoApps">
+                <div class="cama">
     
-                    <div class="app">
+                    <div class="card">
                         <a href="https://open.spotify.com/intl-pt" target="_blank" rel="noopener noreferrer">
                             <img src="img/apps/spotify.png" alt="Spotify" />
                             <p>Spotify</p>
                         </a>
                         
                     </div>
-                    <div class="app">
+                    <div class="card">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <img src="img/apps/instagram.png" alt="Instagram" />
                             <p>Instagram</p>
                         </a>
                     </div>
-                    <div class="app">
+                    <div class="card">
                         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                             <img src="img/apps/twitter.png" alt="Twitter" />
                             <p>Twitter</p>
                         </a>
                     </div>
 
-                    <div class="app">
+                    <div class="card">
                         <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
                             <img src="img/apps/Youtube_logo.png" alt="Youtube" />
                             <p>Youtube</p>
@@ -160,6 +161,10 @@
             <div id="setas"> <!-- setas -->
                 <button id="setaEsquerda" onclick="moverEsquerda()"><img src="img/setas/seEsq.png" alt="Seta Esquerda" /></button>
                 <button id="setaDireita" onclick="moverDireita()"><img src="img/setas/seDir.png" alt="Seta Direita" /></button>
+            </div>
+
+            <div class="retornarLogin"> <!-- retornarLogin -->
+                <button  onclick="mostrarTela('login')">Retornar ao Login</button>
             </div>
             
         </section>

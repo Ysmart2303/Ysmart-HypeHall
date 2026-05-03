@@ -41,7 +41,7 @@ h2 {
     align-items: center;
     min-height: 70vh;
 }
-.corpoLogin, .corpoRegistro {
+.CLR {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ h2 {
     border-radius: 10px;
 }
 
-.corpoLogin button, .corpoRegistro button {
+.CLR button {
     width: 100px;
     height: 30px;
     border: none;
@@ -66,22 +66,22 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.corpoLogin button:hover, .corpoRegistro button:hover {
+.CLR button:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
 }
 
-.corpoLogin button:active, .corpoRegistro button:active {
+.CLR button:active {
     transform: scale(0.90);
 }
 
-.corpoLogin label, .corpoRegistro label {
+.CLR label {
     font-size: 18px;
     color: rgb(0, 0, 0);
 }
 
-.corpoLogin input, .corpoRegistro input {
+.CLR input {
     width: 200px;
     height: 30px;
     border: none;
@@ -91,13 +91,10 @@ h2 {
     transition: box-shadow 0.2s ease;
 }
 
-.corpoLogin input:focus, .corpoRegistro input:focus {
+.CLR input:focus {
     outline: none;
     box-shadow: 0 0 5px 1px black;
 }
-
-/* registro */
-
 
 
 /* corpo */
@@ -116,31 +113,31 @@ h2 {
 
 /* jogos and apps */
 
-.jogo, .app {
+.card {
     text-align: center;
     width: 150px;
 }
 
-.jogo:hover p, .app:hover p {
+.card:hover p {
     color: white;
     text-shadow: 0 0 5px black;
     cursor: pointer;
 }
 
-.jogo:hover img, .app:hover img {
+.card:hover img {
     transform: scale(1.1);
     border: #ffffff solid 2px;
 }
 
-.jogo img, .app img {
+.card img {
     transition: transform 0.3s ease;
 }
 
-.jogo p, .app p {
+.card p {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.corpoJogos, .corpoApps {
+.cama {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,7 +148,7 @@ h2 {
 }
 
 /* configurações basicas */
-.corpoJogos img, .corpoApps img {
+.cama img {
     width: 60px;
     height: 60px;
     border-radius: 10px;
@@ -159,24 +156,24 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.corpoJogos p, .corpoApps p {
+.cama p {
     font-size: 18px;
     color: rgb(0, 0, 0);  
 }
 
-.corpoJogos a, .corpoApps a {
+.cama a {
     text-align: center;
     text-decoration: none;
 }
 
 /* animações */
-.corpoJogos img:hover, .corpoApps img:hover {
+.cama img:hover {
     transform: scale(1.1);
     border: #ffffff solid 2px;
     color: white;
 }
 
-.corpoJogos img:active, .corpoApps img:active {
+.cama img:active {
     transform: scale(0.90);
 }
 
@@ -227,6 +224,36 @@ h2 {
 }
 
 #setas button:active img {
+    transform: scale(0.90);
+}
+
+/* botao de retornar ao login */
+
+.retornarLogin {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.retornarLogin button{
+    width: 100px;
+    height: 39px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retornarLogin button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.retornarLogin button:active {
     transform: scale(0.90);
 }
 
