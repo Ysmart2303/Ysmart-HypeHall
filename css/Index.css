@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(0deg, #ffffff 0%, #47dea9 40%, #18f059 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+/* login e registro */
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+#registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+.corpoLogin, .corpoRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 270px;
+    padding-bottom: 20px;
+    gap: 20px;
+
+    background: rgba(5, 97, 25, 0.571);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.corpoLogin button, .corpoRegistro button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.corpoLogin button:hover, .corpoRegistro button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.corpoLogin button:active, .corpoRegistro button:active {
+    transform: scale(0.90);
+}
+
+.corpoLogin label, .corpoRegistro label {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.corpoLogin input, .corpoRegistro input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+    transition: box-shadow 0.2s ease;
+}
+
+.corpoLogin input:focus, .corpoRegistro input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px black;
+}
+
+/* registro */
+
+
+
+/* corpo */
+
+#corpo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+/* jogos and apps */
+
+.jogo, .app {
+    text-align: center;
+    width: 150px;
+}
+
+.jogo:hover p, .app:hover p {
+    color: white;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+}
+
+.jogo:hover img, .app:hover img {
+    transform: scale(1.1);
+    border: #ffffff solid 2px;
+}
+
+.jogo img, .app img {
+    transition: transform 0.3s ease;
+}
+
+.jogo p, .app p {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.corpoJogos, .corpoApps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* configurações basicas */
+.corpoJogos img, .corpoApps img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.corpoJogos p, .corpoApps p {
+    font-size: 18px;
+    color: rgb(0, 0, 0);  
+}
+
+.corpoJogos a, .corpoApps a {
+    text-align: center;
+    text-decoration: none;
+}
+
+/* animações */
+.corpoJogos img:hover, .corpoApps img:hover {
+    transform: scale(1.1);
+    border: #ffffff solid 2px;
+    color: white;
+}
+
+.corpoJogos img:active, .corpoApps img:active {
+    transform: scale(0.90);
+}
+
+#pe{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer {
+    display: inline-block;
+    padding: 9px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: black;
+}

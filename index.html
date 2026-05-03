@@ -3,54 +3,136 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login - HYPER HALL</title>
+        <title>HYPER HALL</title>
+        <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
         <h1>HYPER HALL</h1>
+
         <!-- login -->
-        <div id="encon_login"></div>
         
-        <section id="login">
-            <h2>Login</h2>
-            <div class="nomeLogin">
-                <label>Nome</label>
-                <input type="text" id="nomeUsu" />
-            </div>
-            <div class="senhaLogin">
-                <label>Senha</label>
-                <input type="text" id="senhaUsu" />
-            </div>
-            <div class="botaoLogin">
-                <button onclick="logar()">Logar</button>
-            </div>
+        <section id="login" style="display: flex;">
+            
+                <div class="corpoLogin">
+                    <h2>Login</h2>
+
+                    <div class="nomeLogin"> <!-- nomeLogin -->
+                        <label for="nomeUsu">Nome:</label>
+                        <input type="text" id="nomeUsu" name="nomeUsu"/>
+                    </div>
+
+                    <div class="senhaLogin"> <!-- senhaLogin -->
+                        <label for="senhaUsu">Senha:</label>
+                        <input type="password" id="senhaUsu" name="senhaUsu"/>
+                    </div>
+
+                    <div class="botaoLogin">
+                        <button type="submit" onclick="logar()">Logar</button>
+                    </div>
+
+                    <div>
+                        <p>Não tem uma conta? <a href="#" onclick="mostrarRegistro()">Registrar</a></p>
+                    </div>
+                </div>
+            
         </section>
         
-        <button onclick="mostrar()">Mostrar</button>
-       
-       <!-- registro -->
         
-        <div id="encon_regi" style="display: none;">
-        <section id="registro">
-            <h2>Registro</h2>
-            <div class="nomeRegistro">
-                <label>Nome</label>
-                <input type="text" id="newNomeUsu" />
-            </div>
-            <div class="senhaRegistro">
-                <label>Senha</label>
-                <input type="text" id="newSenhaUsu" />
-            </div>
-            <div class="botaoRegistro">
-                <button onclick="registrar()">Registrar</button>
-            </div>
+        <!-- registro -->
+
+        <section id="registro" style="display: none;">
+            
+                <div class="corpoRegistro">
+
+                    <h2>Registro</h2>
+
+                    <div class="nomeLogin"> <!-- nome -->
+                        <label for="REnomeUsu">Nome:</label>
+                        <input type="text" id="REnomeUsu" name="REnomeUsu"/>
+                    </div>
+
+                    <div class="senhaLogin"> <!-- senha -->
+                        <label for="REsenhaUsu">Senha:</label>
+                        <input type="password" id="REsenhaUsu" name="REsenhaUsu"/>
+                    </div>
+
+                    <div class="Email"> <!-- Email -->
+                        <label for="REemailUsu">Email:</label>
+                        <input type="email" id="REemailUsu" name="REemailUsu"/>
+                    </div>
+
+                    <div class="botaoRegistro">
+                        <button type="submit" onclick="registrar()">Registrar</button>
+                    </div>
+
+                    <div>
+                        <p>Já tem uma conta? <a href="#" onclick="mostrarRegistro()">Login</a></p>
+                    </div>
+                </div>
+            
         </section>
+
+        <!-- Corpo por login -->
+        
+        <section id="corpo" style="display: none;">
+
+            <h2>JOGOS</h2>
+
+            <div class="corpoJogos">
+                <div class="jogo">
+                   <a href="https://play.google.com/store/apps/details?id=com.monkeyibrow.worldsoccerchamps&hl=pt_BR" target="_blank" rel="noopener noreferrer">
+                       <img src="img/jogos/wsc.jpg" alt="WSC" />
+                        <p>Soccer Champs</p>
+                    </a>
+                </div>
+                <div class="jogo">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="img/jogos/fl.jpg" alt="FL" />
+                        <p>Football League</p>
+                    </a>
+                </div>
+                <div class="jogo">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="img/jogos/dls.png" alt="DLS" />
+                        <p>DLS</p>
+                    </a>
+                </div>
+            </div>
+
+            <h2>APPS</h2>
+            <div class="corpoApps">
+                <div class="app">
+                    <a href="https://open.spotify.com/intl-pt" target="_blank" rel="noopener noreferrer">
+                        <img src="img/apps/spotify.png" alt="App 1" />
+                        <p>Spotify</p>
+                    </a>
+                    
+                </div>
+                <div class="app">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/apps/instagram.png" alt="App 2" />
+                        <p>Instagram</p>
+                    </a>
+                </div>
+                <div class="app">
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/apps/twitter.png" alt="App 3" />
+                        <p>Twitter</p>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+  
+        <!--<button onclick="mostrar()">Mostrar</button> -->
+
+        <div id="pe">
+            <footer>
+                <p>Copyright © 2026 Ysmart2303. Todos os direitos reservados.</p>
+            </footer>
         </div>
-        
-        <section id="buuu">
-          <h2>Butoes de teste</h2>
-        <button onclick="mos()">mostarNome</button>
-        <button onclick="mosSe()">mostarSenha</button>
-        </section>
+            
+            
         <script src="js/index.js"></script>
     </body>
 </html>

@@ -1,21 +1,7 @@
 //NOTA: Por enquanto, não usar LocalStorage.
 
-let nomeU_lista = "Cujinm";
-let senhaU_lista = 2303;
-
-//registrar
-
-function registrar() {
-    let NWnomeU = document.getElementById("newNomeUsu").value;
-    let NWsenhaU = document.getElementById("newSenhaUsu").value;
-
-    if (!NWnomeU || !NWsenhaU) {
-        alert("Preencha todos os campos");
-    } else {
-        nomeU_lista.push(NWnomeU);
-        senhaU_lista.push(NWsenhaU);
-    }
-}
+let nome = "Cujinm";
+let senha = 2303;
 
 //logar
 
@@ -24,33 +10,72 @@ function logar() {
     let senhaU = document.getElementById("senhaUsu").value;
 
     if (!nomeU || !senhaU) {
+        nomeUsu.value = "";
+        senhaUsu.value = "";
         alert("Preencha todos os campos");
-    } else if (nomeU == nomeU_lista && senhaU == senhaU_lista) {
-        alert(`Bem vindo/a ${nomeU}!`);
+    } else if (nomeU == nome && senhaU == senha) {
+        nomeUsu.value = "";
+        senhaUsu.value = "";
+        alert(`Bem vindo senhor ${nomeU}!`);
+        mostrar();
     } else {
-        alert("Informações não encontras, por favor registre-se");
+       nomeUsu.value = "";
+       senhaUsu.value = "";
+       alert("Nome ou senha incorretos");
     }
-}
-
-//APAGAR DEPOIS
-
-function mos() {
-    alert(nomeU_lista);
-}
-
-function mosSe() {
-    alert(senhaU_lista);
 }
 
 // mostar
 function mostrar() {
-  const el = document.getElementById("encon_regi");
+  const emm = document.getElementById("login");
   
-  const emm = document.getElementById("segredo");
+  const el = document.getElementById("corpo");
 
   if (el.style.display === "none") {
-    el.style.display = "block";
+    el.style.display = "flex";
   } else {
     el.style.display = "none";
   }
+
+  if (emm.style.display === "flex") {
+    emm.style.display = "none";
+  } else {
+    emm.style.display = "flex";
+  }
+}
+
+function mostrarRegistro() {
+  const emm = document.getElementById("login");
+  
+  const el = document.getElementById("registro");
+
+  if (el.style.display === "none") {
+    el.style.display = "flex";
+  } else {
+    el.style.display = "none";
+  }
+
+  if (emm.style.display === "flex") {
+    emm.style.display = "none";
+  } else {
+    emm.style.display = "flex";
+  }
+}
+
+//registrar
+function registrar() {
+    let nomeR = document.getElementById("REnomeUsu").value;
+    let senhaR = document.getElementById("REsenhaUsu").value;
+    let emailR = document.getElementById("REemailUsu").value;
+
+    if (!nomeR || !senhaR || !emailR) {
+        alert("Preencha todos os campos");
+    } else {
+      REnomeUsu.value = "";
+      REsenhaUsu.value = "";
+      REemailUsu.value = "";
+      alert("A funcão de registro ainda não está disponível, tente novamente mais tarde.");
+      mostrarRegistro();
+    }
+
 }
