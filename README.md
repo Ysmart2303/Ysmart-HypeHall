@@ -1,2 +1,5 @@
 # Ysmart-HypeHall
-Sim 😃👍
+
+Criado como forma de esbanjar todos os meus principais conhecimentos
+sobre HTML, CSS, JS
+por enquanto...
