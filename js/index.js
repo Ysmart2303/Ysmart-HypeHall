@@ -14,8 +14,8 @@ function logar() {
     nomeUsu.value = "";
     senhaUsu.value = "";
     
-    nomeUsu.placeholder = "Preencha o campo 'nome'";
-    senhaUsu.placeholder = "Preencha o campo 'senha'";
+    erro.textContent = "";
+    erro.textContent = "Preencha todos os campos";
   } else if (nomeU == nome && senhaU == senha) {
     nomeUsu.value = "";
     senhaUsu.value = "";
@@ -24,7 +24,7 @@ function logar() {
   } else {
     nomeUsu.value = "";
     senhaUsu.value = "";
-    alert("Nome ou senha incorretos");
+    erro.textContent = "Nome ou senha incorretos";
   }
 }
 
@@ -39,9 +39,8 @@ function registrar() {
       REsenhaUsu.value = "";
       REemailUsu.value = "";
 
-      REnomeUsu.placeholder = "Preencha o campo 'nome'";
-      REsenhaUsu.placeholder = "Preencha o campo 'senha'";
-      REemailUsu.placeholder = "Preencha o campo 'email'";
+      erroRE.textContent = "";
+      erroRE.textContent = "Preencha todos os campos";
     } else {
       REnomeUsu.value = "";
       REsenhaUsu.value = "";
