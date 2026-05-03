@@ -20,7 +20,7 @@ function logar() {
     nomeUsu.value = "";
     senhaUsu.value = "";
     alert(`Bem vindo senhor ${nomeU}!`);
-    mostrar();
+    mostrarTela("corpo");
   } else {
     nomeUsu.value = "";
     senhaUsu.value = "";
@@ -47,47 +47,24 @@ function registrar() {
       REsenhaUsu.value = "";
       REemailUsu.value = "";
       alert("A funcão de registro ainda não está disponível, tente novamente mais tarde.");
-      mostrarRegistro();
+      mostrarLogin();
     }
 
 }
 
 // mostar
-function mostrar() {
-  const emm = document.getElementById("login");
-  
-  const el = document.getElementById("corpo");
 
-  if (el.style.display === "none") {
-    el.style.display = "flex";
-  } else {
-    el.style.display = "none";
-  }
+function mostrarTela(telaId) {
+  const telas = ["login", "registro", "corpo"];
 
-  if (emm.style.display === "flex") {
-    emm.style.display = "none";
-  } else {
-    emm.style.display = "flex";
-  }
+  telas.forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.add("hidden"); // esconde todas
+  });
+
+  document.getElementById(telaId).classList.remove("hidden"); // mostra só uma
 }
 
-function mostrarRegistro() {
-  const emm = document.getElementById("login");
-  
-  const el = document.getElementById("registro");
-
-  if (el.style.display === "none") {
-    el.style.display = "flex";
-  } else {
-    el.style.display = "none";
-  }
-
-  if (emm.style.display === "flex") {
-    emm.style.display = "none";
-  } else {
-    emm.style.display = "flex";
-  }
-}
 
 function moverEsquerda() {
   const Jogos = document.getElementById("corpoJogos");

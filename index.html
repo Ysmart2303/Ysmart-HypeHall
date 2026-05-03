@@ -11,7 +11,7 @@
 
         <!-- login -->
         
-        <section id="login" style="display: flex;">
+        <section id="login">
             
                 <div class="corpoLogin">
                     <h2>Login</h2>
@@ -31,7 +31,7 @@
                     </div>
 
                     <div>
-                        <p>Não tem uma conta? <a href="#" onclick="mostrarRegistro()">Registrar</a></p>
+                        <p>Não tem uma conta? <a href="#" onclick="mostrarTela('registro')">Registrar</a></p>
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@
         
         <!-- registro -->
 
-        <section id="registro" style="display: none;">
+        <section id="registro" class="hidden">
             
                 <div class="corpoRegistro">
 
@@ -66,7 +66,7 @@
                     </div>
 
                     <div>
-                        <p>Já tem uma conta? <a href="#" onclick="mostrarRegistro()">Login</a></p>
+                        <p>Já tem uma conta? <a href="#" onclick="mostrarTela('login')">Login</a></p>
                     </div>
                 </div>
             
@@ -74,7 +74,7 @@
 
         <!-- Corpo por login -->
         
-        <section id="corpo" style="display: none;">
+        <section id="corpo" class="hidden">
 
             <div id="corpoJogos" style="display: flex;">
 
