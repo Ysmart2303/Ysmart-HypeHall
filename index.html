@@ -75,21 +75,20 @@
                     <div>
                         <p>Já tem uma conta? <a href="#" onclick="mostrarTela('login')">Login</a></p>
                     </div>
-
-                    <div>
-                        <p id="erroRE"></p>
-                    </div>
-
-
+                    
                 </div>
-            
+                
+                <div>
+                    <p id="erroRE"></p>
+                </div>
         </section>
 
+        
         <!-- Corpo pos login -->
         
         <section id="corpo" class="hidden">
 
-            <div id="corpoJogos" style="display: flex;">
+            <div id="corpoJogos">
 
             <h2>JOGOS</h2> <!-- jogos -->
 
@@ -132,7 +131,7 @@
 
         
         
-        <div id="corpoApps" style="display: none;"> <!-- apps -->
+        <div id="corpoApps" class="hidden"> <!-- apps -->
             
                 <h2>APPS</h2>
     
@@ -170,9 +169,18 @@
             </div>
             
             
-            <div id="setas"> <!-- setas -->
-                <button id="setaEsquerda" onclick="moverEsquerda()"><img src="img/setas/seEsq.png" alt="Seta Esquerda" /></button>
-                <button id="setaDireita" onclick="moverDireita()"><img src="img/setas/seDir.png" alt="Seta Direita" /></button>
+            <div class="abas"> <!-- setas -->
+
+                <button id="abajogos" class="bnt-abas" onclick="mostrarAba('corpoJogos')">
+                    <img src="img/icones/icoJogos.png" alt="Seta Esquerda" />
+                    <p>Jogos</p>
+                </button>
+
+                <button id="abaApps" class="bnt-abas" onclick="mostrarAba('corpoApps')">
+                    <img src="img/icones/icoApps.png" alt="Seta Direita" />
+                    <p>Apps</p>
+                </button>
+                
             </div>
 
             <div class="retornarLogin"> <!-- retornarLogin -->
@@ -181,8 +189,7 @@
             
         </section>
         
-        
-        <!-- <button onclick="mostrar()">Mostrar</button> -->
+        <button onclick="mostrarTela('corpo')">Mostar</button>
         
         <div id="pe">
             <footer>

@@ -46,7 +46,7 @@ function registrar() {
       REsenhaUsu.value = "";
       REemailUsu.value = "";
       alert("A funcão de registro ainda não está disponível, tente novamente mais tarde.");
-      mostrarLogin();
+      mostrarTela("login");
     }
 
 }
@@ -62,33 +62,47 @@ function mostrarTela(telaId) {
   });
 
   document.getElementById(telaId).classList.remove("hidden"); // mostra só uma
+
+  erro.textContent = "";
+  erroRE.textContent = "";
 }
 
+function mostrarAba(abaId) {
+  const abas = ["corpoJogos", "corpoApps",];
 
-function moverEsquerda() {
-  const Jogos = document.getElementById("corpoJogos");
-  const Apps = document.getElementById("corpoApps");
+  abas.forEach(id => {
+    const ab = document.getElementById(id);
+    ab.classList.add("hidden"); // esconde todas
+  });
 
-  if (Jogos.style.display === "flex") {
-    Jogos.style.display = "none";
-    Apps.style.display = "flex";
-  } else {
-    Jogos.style.display = "flex";
-    Apps.style.display = "none";
-  }
+  document.getElementById(abaId).classList.remove("hidden"); // mostra só uma
 
 }
 
-function moverDireita() {
-  const Jogos = document.getElementById("corpoJogos");
-  const Apps = document.getElementById("corpoApps");
+// function moverEsquerda() {
+//   const Jogos = document.getElementById("corpoJogos");
+//   const Apps = document.getElementById("corpoApps");
 
-  if (Jogos.style.display === "none") {
-    Jogos.style.display = "flex";
-    Apps.style.display = "none";
-  } else {
-    Jogos.style.display = "none";
-    Apps.style.display = "flex";
-  }
+//   if (Jogos.style.display === "flex") {
+//     Jogos.style.display = "none";
+//     Apps.style.display = "flex";
+//   } else {
+//     Jogos.style.display = "flex";
+//     Apps.style.display = "none";
+//   }
+
+// }
+
+// function moverDireita() {
+//   const Jogos = document.getElementById("corpoJogos");
+//   const Apps = document.getElementById("corpoApps");
+
+//   if (Jogos.style.display === "none") {
+//     Jogos.style.display = "flex";
+//     Apps.style.display = "none";
+//   } else {
+//     Jogos.style.display = "none";
+//     Apps.style.display = "flex";
+//   }
   
-}
+// }
