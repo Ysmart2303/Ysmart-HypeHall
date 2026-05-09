@@ -78,31 +78,3 @@ function mostrarAba(abaId) {
   document.getElementById(abaId).classList.remove("hidden"); // mostra só uma
 
 }
-
-// function moverEsquerda() {
-//   const Jogos = document.getElementById("corpoJogos");
-//   const Apps = document.getElementById("corpoApps");
-
-//   if (Jogos.style.display === "flex") {
-//     Jogos.style.display = "none";
-//     Apps.style.display = "flex";
-//   } else {
-//     Jogos.style.display = "flex";
-//     Apps.style.display = "none";
-//   }
-
-// }
-
-// function moverDireita() {
-//   const Jogos = document.getElementById("corpoJogos");
-//   const Apps = document.getElementById("corpoApps");
-
-//   if (Jogos.style.display === "none") {
-//     Jogos.style.display = "flex";
-//     Apps.style.display = "none";
-//   } else {
-//     Jogos.style.display = "none";
-//     Apps.style.display = "flex";
-//   }
-  
-// }

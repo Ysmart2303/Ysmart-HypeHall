@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
-
+    user-select: none;
 }
 
 h1{
@@ -24,6 +24,24 @@ h2 {
     text-align: center;
     margin-top: 20px;
     color: black;
+}
+
+/* header */
+
+header {
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 /* login e registro */
@@ -142,6 +160,7 @@ h2 {
 /* botao de abas */
 
 .abas {
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -162,13 +181,13 @@ h2 {
     cursor: pointer;
 }
 
+.bnt-abas p {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .bnt-abas:hover img{
     cursor: pointer;
     transform: scale(1.1);
-}
-
-.bnt-abas p {
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 /* corpo pos login */
