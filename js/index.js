@@ -20,7 +20,7 @@ function logar() {
     nomeUsu.value = "";
     senhaUsu.value = "";
     alert(`Bem vindo senhor ${nomeU}!`);
-    mostrarTela("corpo");
+    mostrarTela('home');
   } else {
     nomeUsu.value = "";
     senhaUsu.value = "";
@@ -54,7 +54,7 @@ function registrar() {
 // mostar
 
 function mostrarTela(telaId) {
-  const telas = ["login", "registro", "corpo"];
+  const telas = ["login", "registro", "corpo", "home", "suporte", "contato"];
 
   telas.forEach(id => {
     const el = document.getElementById(id);

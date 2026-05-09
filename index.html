@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
-
+    
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,17 +11,39 @@
         
         <header>
             <nav class="menu">
-                <a href="#">Home</a>
-                <a href="#">Suporte</a>
-                <a href="#">Contato</a>
+                <a href="#" onclick="mostrarTela('home')">Home</a>
+                <a href="#" onclick="mostrarTela('contato')">Contato</a>
+                <a href="#" onclick="mostrarTela('suporte')">Suporte</a>
+                <a href="#" onclick="mostrarTela('login')">login</a>
             </nav>
         </header>
         
         <h1>HYPER HALL</h1>
 
+        <section id="home" >
+            <h2>Bem Vindo</h2>
+
+            <div id="intro">
+                <p>Sinta-se a vontade para navegar por meu site</p>
+                <p>visite a aba de aplicativos <a href="#" onclick="mostrarTela('corpo')">aqui</a></p>
+            </div>
+
+        </section>
+
+
+        <section id="suporte" class="hidden">
+            <h2>Suporte</h2>
+        </section>
+
+
+        <section id="contato" class="hidden">
+            <h2>Contato</h2>
+        </section>
+
+
         <!-- login -->
         
-        <section id="login">
+        <section id="login" class="hidden">
             
                 <div class="CLR">
 
@@ -190,14 +212,10 @@
                 </button>
                 
             </div>
-
-            <div class="retornarLogin"> <!-- retornarLogin -->
-                <button  onclick="mostrarTela('login')">Retornar ao Login</button>
-            </div>
             
         </section>
         
-        <button onclick="mostrarTela('corpo')">Mostar</button>
+        <!-- <button onclick="mostrarTela('corpo')">Mostar</button> -->
         
         <div id="pe">
             <footer>
