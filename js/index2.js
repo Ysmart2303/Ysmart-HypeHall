@@ -1,75 +1,84 @@
-let nome = "Cujinm";
-let senha = "2303";
-let logado = false;
+ // conta padrão
+    let nome = "Cujinm";
+    let senha = "2303";
 
-function logar() {
+    let logado = false;
 
-  let nomeU = document.getElementById("nomeUsu").value;
-  let senhaU = document.getElementById("senhaUsu").value;
+    // LOGIN
+    function logar() {
 
-  if (!nomeU || !senhaU) {
+      let nomeU = document.getElementById("nomeUsu").value;
+      let senhaU = document.getElementById("senhaUsu").value;
 
-    document.getElementById("nomeUsu").value = "";
-    document.getElementById("senhaUsu").value = "";
+      let erro = document.getElementById("erro");
 
-    erro.textContent = "Preencha todos os campos";
+      erro.textContent = "";
 
-  } else if (nomeU == nome && senhaU == senha) {
+      // campos vazios
+      if (!nomeU || !senhaU) {
 
-    document.getElementById("nomeUsu").value = "";
-    document.getElementById("senhaUsu").value = "";
+        erro.textContent = "Preencha todos os campos";
 
-    logado = true;
+        return;
+      }
 
-    alert(`Bem vindo senhor ${nomeU}!`);
+      // login conta fixa
+      if (nomeU == nome && senhaU == senha) {
 
-    document.getElementById("btnLogin").textContent = nomeU;
-    document.getElementById("btnLogin").setAttribute("onclick", "mostrarTela('conta')");
-    document.getElementById("nomePerfil").textContent = nomeU;
+        entrarConta(nomeU);
 
-    mostrarTela('home');
+      }
 
-  } else if (nome == localStorage.getItem("nome") && senha == localStorage.getItem("senha")) {
+      // login conta registrada
+      else if (
+        nomeU == localStorage.getItem("nome") &&
+        senhaU == localStorage.getItem("senha")
+      ) {
 
-    document.getElementById("nomeUsu").value = "";
-    document.getElementById("senhaUsu").value = "";
-    logado = true;
-    
+        entrarConta(nomeU);
 
-  } else {
+      }
 
-    document.getElementById("nomeUsu").value = "";
-    document.getElementById("senhaUsu").value = "";
+      // erro
+      else {
 
-    erro.textContent = "Nome ou senha incorretos";
-  }
-}
+        erro.textContent = "Nome ou senha incorretos";
 
-//registrar
-function registrar() {
-    let nomeR = document.getElementById("REnomeUsu").value;
-    let senhaR = document.getElementById("REsenhaUsu").value;
-    let emailR = document.getElementById("REemailUsu").value;
-
-    if (!nomeR || !senhaR || !emailR) {
-      REnomeUsu.value = "";
-      REsenhaUsu.value = "";
-      REemailUsu.value = "";
-
-      erroRE.textContent = "";
-      erroRE.textContent = "Preencha todos os campos";
-    } else {
-
-      localStorage.setItem("nome", nomeR);
-      localStorage.setItem("senha", senhaR);
-      localStorage.setItem("email", emailR);
-
-      REnomeUsu.value = "";
-      REsenhaUsu.value = "";
-      REemailUsu.value = "";
-      mostrarTela("login");
+      }
     }
 
+// REGISTRO
+function registrar() {
+
+  let nomeR = document.getElementById("REnomeUsu").value;
+  let senhaR = document.getElementById("REsenhaUsu").value;
+  let emailR = document.getElementById("REemailUsu").value;
+
+  let erroRE = document.getElementById("erroRE");
+
+  erroRE.textContent = "";
+
+  // campos vazios
+  if (!nomeR || !senhaR || !emailR) {
+
+    erroRE.textContent = "Preencha todos os campos";
+
+    return;
+  }
+
+  // salvar
+  localStorage.setItem("nome", nomeR);
+  localStorage.setItem("senha", senhaR);
+  localStorage.setItem("email", emailR);
+
+  // limpar inputs
+  document.getElementById("REnomeUsu").value = "";
+  document.getElementById("REsenhaUsu").value = "";
+  document.getElementById("REemailUsu").value = "";
+
+  alert("Conta registrada com sucesso!");
+
+  mostrarTela("login");
 }
 
 // mostar

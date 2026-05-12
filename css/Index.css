@@ -78,6 +78,12 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    border: solid;
+}
+
+.perfil a {
+    text-decoration: none;
+    color: black;
 }
 
 #fotoPerfil {
