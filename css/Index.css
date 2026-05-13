@@ -12,6 +12,27 @@ body {
     /* user-select: none; */
 }
 
+button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
 h1{
     font-family: 'Arial Black', Arial, Helvetica, sans-serif;
     text-align: center;
@@ -130,7 +151,7 @@ header {
     border-radius: 10px;
 }
 
-.CLR button, #intro button {
+/* .CLR button, #intro button {
     width: 100px;
     height: 30px;
     border: none;
@@ -149,7 +170,7 @@ header {
 
 .CLR button:active, #intro button:active {
     transform: scale(0.90);
-}
+} */
 
 .CLR label {
     font-size: 18px;

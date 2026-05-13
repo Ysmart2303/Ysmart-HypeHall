@@ -120,6 +120,17 @@ function mostrarAba(abaId) {
 //     modBntLogin();
 // };
 
+//atualizar nome nao aba login
+
+function attNome() {
+  if (logado) {
+    const nomeU = document.getElementById("nomeUsu").value;
+
+    
+  }
+}
+
+//atualizar foto
 function atualizarFoto() {
   const fotoInput = document.getElementById("fotoInput");
   const fotoConta = document.getElementById("fotoConta");

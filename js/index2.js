@@ -4,49 +4,79 @@
 
     let logado = false;
 
-    // LOGIN
-    function logar() {
+// LOGIN
+function logar() {
 
-      let nomeU = document.getElementById("nomeUsu").value;
-      let senhaU = document.getElementById("senhaUsu").value;
+  let nomeU = document.getElementById("nomeUsu").value;
+  let senhaU = document.getElementById("senhaUsu").value;
 
-      let erro = document.getElementById("erro");
+  let erro = document.getElementById("erro");
 
-      erro.textContent = "";
+  erro.textContent = "";
 
-      // campos vazios
-      if (!nomeU || !senhaU) {
+  // campos vazios
+  if (!nomeU || !senhaU) {
+    erro.textContent = "Preencha todos os campos";
+    return;
+  }
 
-        erro.textContent = "Preencha todos os campos";
+  // login conta fixa
+  if (nomeU == nome && senhaU == senha) {
 
-        return;
-      }
+    logado = true;
 
-      // login conta fixa
-      if (nomeU == nome && senhaU == senha) {
+    localStorage.setItem("logado", "true");
+    localStorage.setItem("usuario", nomeU);
 
-        entrarConta(nomeU);
+    document.getElementById("btnLogin").textContent = nomeU;
 
-      }
+    document.getElementById("btnLogin")
+    .setAttribute("onclick", "mostrarTela('conta')");
 
-      // login conta registrada
-      else if (
-        nomeU == localStorage.getItem("nome") &&
-        senhaU == localStorage.getItem("senha")
-      ) {
+    alert(`Bem vindo senhor ${nomeU}!`);
 
-        entrarConta(nomeU);
+    mostrarTela('home');
+}
+    // login conta registrada
+     else if (nomeU == localStorage.getItem("nome") && senhaU == localStorage.getItem("senha")) {
 
-      }
+    logado = true;
 
-      // erro
-      else {
+    localStorage.setItem("logado", "true");
+    localStorage.setItem("usuario", nomeU);
 
-        erro.textContent = "Nome ou senha incorretos";
+    document.getElementById("btnLogin").textContent = nomeU;
 
-      }
-    }
+    document.getElementById("btnLogin")
+    .setAttribute("onclick", "mostrarTela('conta')");
 
+    alert(`Bem vindo senhor ${nomeU}!`);
+
+    mostrarTela('home');
+}
+  // erro
+  else {
+    erro.textContent = "Nome ou senha incorretos";
+  }
+}
+
+//des;logar
+
+function deslogar() {
+
+    logado = false;
+
+    localStorage.removeItem("logado");
+    localStorage.removeItem("usuario");
+
+    document.getElementById("btnLogin")
+    .textContent = "Login";
+
+    document.getElementById("btnLogin")
+    .setAttribute("onclick", "mostrarTela('login')");
+
+    mostrarTela("home");
+}
 // REGISTRO
 function registrar() {
 
@@ -109,26 +139,25 @@ function mostrarAba(abaId) {
 
 }
 
-//verificar se o usuário está logado para acessar o corpo do site
 
-// function verificarAcessoCorpo() {
+//atualizar nome nao aba login
+function attNome() {
 
-//   if (logado) {
-//     mostrarTela('corpo');
-//   } else {
-//     if(confirm("Faça login para acessar o conteúdo. Deseja ir para a tela de login?")) {
-//       mostrarTela('login');
-//     } else {
-//       mostrarTela('home');
-//     }
-//   }
-// }
+  if (logado) {
+    const nomeU = document.getElementById("nomeUsu").value;
+    document.getElementById("nomePerfil").textContent = nomeU;
+    document.getElementById("btnLogin").textContent = nomeU;
 
-// window.onload = () => { //roda quando a pagina carregar
-//     verificarAcessoCorpo();
-//     modBntLogin();
-// };
+    document.getElementById("btnLogin").setAttribute("onclick", "mostrarTela('conta')");    
 
+  } else if (localStorage.getItem("logado") !== "true") {
+
+    document.getElementById("btnLogin").textContent = "Login";
+    document.getElementById("btnLogin").setAttribute("onclick", "mostrarTela('login')");
+  }
+}
+
+//atualizar foto
 function atualizarFoto() {
   const fotoInput = document.getElementById("fotoInput");
   const fotoConta = document.getElementById("fotoConta");
@@ -165,8 +194,12 @@ inputFoto.addEventListener("change", function () {
 
         leitor.onload = function (e) {
 
+            const foto = e.target.result;
+
             document.getElementById("fotoPerfil")
-            .src = e.target.result;
+            .src = foto;
+
+            localStorage.setItem("fotoPerfil", foto);
 
         };
 
@@ -177,7 +210,34 @@ inputFoto.addEventListener("change", function () {
 // mostrarInfo
 
 function mostrarInfo() {
-  
-
   alert(23);
 }
+
+window.onload = function () {
+
+    const loginSalvo = localStorage.getItem("logado");
+    const usuarioSalvo = localStorage.getItem("usuario");
+    const fotoSalva = localStorage.getItem("fotoPerfil");
+
+    if (loginSalvo === "true") {
+
+        logado = true;
+
+        document.getElementById("btnLogin")
+        .textContent = usuarioSalvo;
+
+        document.getElementById("btnLogin")
+        .setAttribute("onclick", "mostrarTela('conta')");
+
+        document.getElementById("nomePerfil")
+        .textContent = usuarioSalvo;
+
+        if (fotoSalva) {
+
+            document.getElementById("fotoPerfil")
+            .src = fotoSalva;
+        }
+    }
+
+    mostrarTela("home");
+};
